@@ -30,7 +30,7 @@ class CucumberIntegrationSpec extends IntegrationSpec {
                 tags = ["@test", "@happypath", "~@ignore"]
             }
             repositories {
-                jcenter()
+                mavenCentral()
             }
 
             dependencies {

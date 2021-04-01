@@ -33,7 +33,7 @@ to run up to 3 parallel forks. The `cucumberTest` source set will depend on the 
 ```groovy
 plugins {
     id 'java'
-    id 'com.patdouble.cucumber-jvm' version '0.19'
+    id 'com.patdouble.cucumber-jvm' version '0.20'
 }
 
 addCucumberSuite 'cucumberTest'
@@ -50,13 +50,13 @@ cucumberTest {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    cucumberTestImplementation 'io.cucumber:cucumber-java:4.8.0'
+    cucumberTestCompile 'io.cucumber:cucumber-java:6.10.2'
     // To use JUnit assertions in the step definitions:
-    cucumberTestImplementation 'junit:junit:4.12'
+    cucumberTestCompile 'junit:junit:4.13'
 }
 ```
 
@@ -69,7 +69,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.patdouble:gradle-cucumber-jvm-plugin:0.19"
+        classpath "com.patdouble:gradle-cucumber-jvm-plugin:0.20"
     }
 }
 apply plugin: 'cucumber-jvm'
@@ -105,7 +105,7 @@ An example `build.gradle.kts` file might look like this:
 ```kotlin
 plugins {
     id("java")
-    id("com.patdouble.cucumber-jvm").version("0.19")
+    id("com.patdouble.cucumber-jvm").version("0.20")
 }
 
 cucumber {
@@ -118,8 +118,8 @@ repositories {
 }
 
 dependencies {
-    add("cucumberTestImplementation", "io.cucumber:cucumber-java:4.8.0")
-    add("cucumberTestImplementation", "junit:junit:4.12")
+    add("cucumberTestCompile", "io.cucumber:cucumber-java:6.10.2")
+    add("cucumberTestCompile", "junit:junit:4.13")
 }
 ```
 

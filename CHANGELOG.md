@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.20] - 2021-04-01
+
+### Changed
+
+- cucumber-reporting to 5.5.2
+- other dependency updates
+- move away from bintray
+
 ## [0.19] - 2019-12-10
 
 ### Changed
